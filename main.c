@@ -4,18 +4,14 @@
 float const Pi=3.1415;
 int main()
 {
+  
   float x1,y1,z1,x2,y2,z2,r,S,P,Pir,Area,a,b,c,n;
-  printf("radius\n");
-  scanf("%f",&r);
-  printf("PointTr\n");
-  scanf("%f",&x1);
-  scanf("%f",&x2);
-  scanf("%f",&y1);
-  scanf("%f",&y2);
-  scanf("%f",&z1);
-  scanf("%f",&z2);
+  printf ("radius_cir=");
+  scanf ("%f",&r);
+  printf ("points_tr x1 x2 y1 y2 z1 z2=");
+  scanf("%f %f %f %f %f %f",&x1, &x2 , &y1 , &y2,&z1,&z2);
   P=2*Pi*r;
-  S=Pi*2*2;
+  S=Pi*r*r;
   a=sqrt(pow(x2-x1,2)+pow(y2-y1,2));
   b=sqrt(pow(y2-y1,2)+pow(z2-z1,2));
   c=sqrt(pow(z2-z1,2)+pow(x2-x1,2));
