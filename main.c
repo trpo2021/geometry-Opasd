@@ -5,16 +5,16 @@ float const Pi=3.1415;
 int main()
 {
   
-  float x1,y1,z1,x2,y2,z2,r,S,P,Pir,Area,a,b,c,n;
-  printf ("radius_cir=");
-  scanf ("%f",&r);
-  printf ("points_tr x1 x2 y1 y2 z1 z2=");
-  scanf("%f %f %f %f %f %f",&x1, &x2 , &y1 , &y2,&z1,&z2);
+  float x1,y1,x2,y2,x3,y3,r,S,P,Pir,Area,a,b,c,n,cen1,cen2;
+  printf ("circle=");
+  scanf ("%f %f %f",&cen1,&cen2,&r);
+  printf ("triangle=");
+  scanf("%f %f %f %f %f %f",&x1,&y1,&x2,&y2,&x3,&y3);
   P=2*Pi*r;
   S=Pi*r*r;
-  a=sqrt(pow(x2-x1,2)+pow(y2-y1,2));
-  b=sqrt(pow(y2-y1,2)+pow(z2-z1,2));
-  c=sqrt(pow(z2-z1,2)+pow(x2-x1,2));
+  a=sqrt(pow(x1-x2,2)+pow(y1-y2,2));
+  b=sqrt(pow(x2-x3,2)+pow(y2-y3,2));
+  c=sqrt(pow(x3-x1,2)+pow(y3-y1,2));
   Pir=a+b+c;
   n=Pir/2;
   Area=sqrt(n*(n-a)*(n-b)*(n-c));
