@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include <string.h>
+#include "figure.h"
 
 float const Pi=3.1415;
 int main()
@@ -24,37 +25,22 @@ int main()
     printf ("err_colvo<=0\n");
       }
   while (colvo2<=0);
-  
-
   do
     {
-      P=0;
-      S=0;
       printf ("circle=");
       scanf ("%f %f %f",&cen1,&cen2,&r);
-      P=2*Pi*r;
-      S=Pi*r*r;
-      printf ("perimeter_cir=%f\n",P);
-      printf ("area_cir=%f\n",S);
+      printf ("percir=%f\n",per_cir(r));
+      printf ("areacir=%f\n",area_cir(r));
       colvo1--;
     }
   while (colvo1!=0);
 
   do
     {
-      Pir=0;
-      Area=0;
-      a=0;b=0;c=0;
       printf ("triangle=");
       scanf("%f %f %f %f %f %f",&x1,&y1,&x2,&y2,&x3,&y3);
-      a=sqrt(pow(x1-x2,2)+pow(y1-y2,2));
-      b=sqrt(pow(x2-x3,2)+pow(y2-y3,2));
-      c=sqrt(pow(x3-x1,2)+pow(y3-y1,2));
-      Pir=a+b+c;
-      n=Pir/2;
-      Area=sqrt(n*(n-a)*(n-b)*(n-c));
-      printf ("perimeter_tr=%f\n",Pir);
-      printf ("area_tr=%f\n",Area);
+      printf ("perimeter_tr=%f\n",per_tri(x1,y1,x2,y2,x3,y3));
+      printf ("area_tr=%f\n",area_tri(x1,y1,x2,y2,x3,y3));
       colvo2--;
     }
   while (colvo2!=0);
