@@ -1,5 +1,0 @@
-Circule (1 , 1 , 5)
-Circle (1 2,5 )
-Cie 24 csa 
-Circle (1 2 ,5) Cir
-Circle (1 2,5)
