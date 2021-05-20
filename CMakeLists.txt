@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 17)
 add_library(Lib_geom lib/Library.cpp lib/Library.h)
 
 #GeometryaMOIA main executable
-add_executable(geometry geometry.cpp)
+add_executable(geometry src/geometry.cpp)
 target_include_directories(geometry PRIVATE lib)
 target_link_libraries(geometry Lib_geom)
 target_compile_options(Lib_geom PRIVATE -lm)
